@@ -40,4 +40,4 @@ def signin():
 
         flash('Wrong email or password', 'error-message')
 
-    return render_template("auth/signin.html", form=form)
+    return render_template("auth_module/signin.html", form=form)
