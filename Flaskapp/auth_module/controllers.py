@@ -3,16 +3,17 @@ from flask import Blueprint, request, render_template, \
                   flash, g, session, redirect, url_for
 
 # Import password / encryption helper tools
-from werkzeug import check_password_hash, generate_password_hash
+from werkzeug import *
+#check_password_hash, generate_password_hash
 
 # Import the database object from the main app module
-from app import db
+from Flaskapp import db
 
 # Import module forms
-from app.auth_module.forms import LoginForm
+from Flaskapp.auth_module.forms import LoginForm
 
 # Import module models (i.e. User)
-from app.auth_module.models import User
+from Flaskapp.auth_module.models import User
 
 # Define the blueprint: 'auth', set its url prefix: app.url/auth
 auth_module = Blueprint('auth', __name__, url_prefix='/auth')
