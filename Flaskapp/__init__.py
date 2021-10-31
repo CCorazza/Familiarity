@@ -19,11 +19,11 @@ db = SQLAlchemy(app)
 def not_found(error):
     return render_template('404.html'), 404
 
-# Import a module / component using its blueprint handler variable (home)
-from app.home.controllers import home as auth_module
+# Import a module / component using its blueprint handler variable (home_module)
+from app.home_module.controllers import home_module as home
 
 # Register blueprint(s)
-app.register_blueprint(auth_module)
+app.register_blueprint(home)
 # app.register_blueprint(xyz_module)
 # ..
 
